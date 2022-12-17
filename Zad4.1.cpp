@@ -1,5 +1,4 @@
 #include <iostream>
-#include <conio.h>
 using namespace std;
 
 int szukanie_najwiekszego(int tab[]){
@@ -27,7 +26,7 @@ int main()
 			continue;
 		}
 	}
-	cout << "Najwieksza wartosc to " << max ;
+	cout << "Najczesciej wystepujacy element tablicy to " << max ;
 	
     return 0;
 }

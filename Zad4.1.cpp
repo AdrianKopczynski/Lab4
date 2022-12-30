@@ -10,7 +10,7 @@ int main()
     cout << "Podaj ilosc elementow tablicy: ";
     cin >> tableCap;
     int table[tableCap];
-    for (int i = 0; i<=tableCap;i++){
+    for (int i = 0; i<tableCap;i++){
     	int temp = 0;
     	cout << "Podaj wartosc dla elementu " << i+1 << " : " <<endl;
     	cin >> temp;
@@ -18,7 +18,7 @@ int main()
     	table[i] = temp;
 	}
 	int max= 0;
-	for (int i = 0; i<=tableCap;i++){
+	for (int i = 0; i<tableCap;i++){
 		if (table[i]>=max){
 			max = table[i];
 		}

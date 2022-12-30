@@ -1,9 +1,6 @@
 #include <iostream>
 using namespace std;
 
-int szukanie_najwiekszego(int tab[]){
-	
-}
 int main()
 {
     int tableCap;
@@ -26,7 +23,7 @@ int main()
 			continue;
 		}
 	}
-	cout << "Najczesciej wystepujacy element tablicy to " << max ;
+	cout << "Najwiekszy element tablicy to " << max ;
 	
     return 0;
 }

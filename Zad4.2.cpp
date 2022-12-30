@@ -1,46 +1,40 @@
 #include <iostream>
 using namespace std;
 
-int szukanie_najwiekszego(int tab[]){
-	
-}
 int main()
 {
     int tableCap;
     cout << "Podaj ilosc elementow tablicy: ";
     cin >> tableCap;
-    int table[tableCap];
-    for (int i = 0; i<=tableCap;i++){
+    int table[tableCap],tempTable[2][tableCap];
+    for (int i = 0; i<tableCap;i++){
     	int temp = 0;
     	cout << "Podaj wartosc dla elementu " << i+1 << " : " <<endl;
     	cin >> temp;
     	cout << endl;
     	table[i] = temp;
+    	tempTable[0][i] = temp;
+    	tempTable[1][i] = 0;
 	}
-	int max= 0;
-	int times;
-	int prevTimes = 0;
-	for (int i = 0; i<=tableCap;i++){
-		times = 0;
-		for(int x = 0; x<=tableCap;x++){
-			int temp = table[i];
-			if(table[x] == temp){
-				times++;
+	for (int y = 0; y<tableCap;y++){
+		for (int x = 0; x<tableCap;x++){
+			if (table[y]==tempTable[0][x]){
+				tempTable[1][y] += 1;
 			}
 			else{
 				continue;
 			}
 		}
-		if(times>prevTimes){
-			
+	}
+	int max = 0;
+	for (int i = 0; i<tableCap;i++){
+		if (tempTable[1][i]>=max){
+			max = table[i];
 		}
-		prevTimes=times;
+		else{
+			continue;
+		}
 	}
-	if (max == 0){
-		cout << "Kazda wartosc wystepuje po jednym razie";
-	}
-	else{
-		cout << "Najczesciej wystepujacy element tablicy to " << max ;
-	}
+		cout << "Najczesciej wystepujacy element tablicy to " << max;
     return 0;
 }
